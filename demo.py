@@ -1,3 +1,5 @@
+#-------- boolean logic
+
 TRUE = lambda x : lambda y : x
 FALSE = lambda x : lambda y : y
 
@@ -7,10 +9,12 @@ AND = lambda x : lambda y : x(y)(x)
 EQ = lambda x : lambda y : x(y)(NOT(y))
 XOR = lambda x : lambda y : NOT(EQ(x)(y))
 
+
+#-------- boolean logic demo
+
 BOOLS = [TRUE, FALSE]
 def bool2Str(b):
     return b("T")("F")
-   
 
 print("---")
 for b in BOOLS:
